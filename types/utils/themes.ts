@@ -1,0 +1,51 @@
+export declare const defaultTheme: {
+    primaryColor: string;
+    primaryHoverColor: string;
+    primaryActiveColor: string;
+    primaryFocusColor: string;
+    secondaryColor: string;
+    secondaryHoverColor: string;
+    secondaryActiveColor: string;
+    textColorOnPrimary: string;
+    textColorOnSecondary: string;
+    textColor: string;
+    textColorInverted: string;
+    primaryFont: string;
+    disabled: string;
+    textOnDisabled: string;
+    status: {
+        warningColor: string;
+        warningHoverColor: string;
+        wariningActiveColor: string;
+        errorColor: string;
+        errorHoverColor: string;
+        errorActiveColor: string;
+        successColor: string;
+        successHoverColor: string;
+        successActiveColor: string;
+    };
+};
+export declare const darkTheme: {
+    primaryColor: string;
+    primaryHoverColor: string;
+    primaryActiveColor: string;
+    primaryFocusColor: string;
+    textColorOnPrimary: string;
+    textColorOnSecondary: string;
+    textColor: string;
+    textColorInverted: string;
+    primaryFont: string;
+    disabled: string;
+    textOnDisabled: string;
+    status: {
+        warningColor: string;
+        warningHoverColor: string;
+        wariningActiveColor: string;
+        errorColor: string;
+        errorHoverColor: string;
+        errorActiveColor: string;
+        successColor: string;
+        successHoverColor: string;
+        successActiveColor: string;
+    };
+};
