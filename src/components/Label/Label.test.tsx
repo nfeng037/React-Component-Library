@@ -8,5 +8,12 @@ describe("Running Test for Label", () => {
     render(<Label htmlFor="username" size="large" text="Label"/>)
     const labelElement = screen.getByText('Label');
     expect(labelElement).toBeInTheDocument();
-  })
+  });
+
+  test('has correct style when disabled', () => {
+    render(<Label htmlFor="username" disabled text='Disabled Label'/>);
+    const label = screen.getByText('Disabled Label');
+    expect(label).toHaveStyle('background-color: grey');
+  });
+
 })

@@ -7,12 +7,17 @@ const StyledText = styled.span<TextProps>`
   font-family: "Playfair Display", serif;
   font-size: ${(props) =>
     props.types === "header"
-      ? typeScale.header3
+      ? typeScale.header2
       : props.types === "paragraph"
       ? typeScale.paragraph
       : typeScale.copyrightText};
   font-weight: ${(props) => (props.bold ? "bold" : "normal")};
   font-style: ${(props) => (props.italic ? "italic" : "normal")};
+  ${(props) => props.disabled && `
+    background-color: grey;
+    cursor: not-allowed;
+    color: #ccc;
+  `}
 `;
 
 const Text: React.FC<TextProps> = ({

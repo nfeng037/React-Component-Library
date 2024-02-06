@@ -15,16 +15,31 @@ const StyledLabel = styled.label<LabelProps>`
   cursor: pointer;
   color: ${(props) =>
     props.theme.textColor
-  }
+  };
+  ${(props) => props.disabled && `
+    background-color: grey;
+    cursor: not-allowed;
+    color: #ccc;
+  `}
 `;
 
 const Label: React.FC<LabelProps> = ({
   size = "medium",
   htmlFor,
   text,
+  disabled = false,
   ...props
 }) => {
-  return <StyledLabel size={size} htmlFor={htmlFor}{...props}>{text}</StyledLabel>;
+  return (
+    <StyledLabel
+      size={size}
+      htmlFor={htmlFor}
+      disabled={disabled}
+      {...props}
+    >
+      {text}
+    </StyledLabel>
+  );
 }
 
 export default Label;

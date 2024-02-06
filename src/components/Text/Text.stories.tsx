@@ -46,3 +46,10 @@ export const ItalicText: StoryObj<TextProps> = {
     text: 'Italic Text',
   }
 }
+
+export const DisabledText: StoryObj<LabelProps> = {
+  args: {
+    text: 'Disabled',
+    disabled: true,
+  },
+};

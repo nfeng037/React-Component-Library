@@ -35,6 +35,14 @@ export const LargeFontSize: StoryObj<LabelProps> = {
   },
 };
 
+export const DisabledLabel: StoryObj<LabelProps> = {
+  args: {
+    ...Default.args,
+    size: 'large',
+    disabled: true,
+  },
+};
+
 export const DarkThemeFont = Template.bind({});
 DarkThemeFont.args = {
   size: 'medium',

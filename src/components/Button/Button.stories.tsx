@@ -18,7 +18,7 @@ export const DefaultTheme = Template.bind({});
 DefaultTheme.args = {
   primary: true,
   size: 'medium',
-  text: 'Button',
+  text: 'Default Button',
 };
 DefaultTheme.decorators = [(Story) => (
   <ThemeProvider theme={defaultTheme}>
@@ -31,7 +31,7 @@ export const DarkTheme = Template.bind({});
 DarkTheme.args = {
   primary:true,
   size: 'medium',
-  text: 'Button'
+  text: 'Dark Theme Button'
 };
 DarkTheme.decorators = [(Story) => (
   <ThemeProvider theme = {darkTheme}>

@@ -110,12 +110,12 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <StyledButton
-    type="button"
-    onClick={onClick}
-    disabled={disabled}
-    size={size}
-    {...props}
-    aria-disabled={disabled ? true : undefined}
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      size={size}
+      {...props}
+      aria-disabled={disabled ? true : undefined}
     >
       {text}
     </StyledButton>
