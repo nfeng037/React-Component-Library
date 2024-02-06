@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Set the working directory in the container
-WORKDIR /feng_na_ui_garden
+WORKDIR /na_feng_ui_garden
 
 # Copy the package.json file and package-lock.json file
 COPY package*.json ./
