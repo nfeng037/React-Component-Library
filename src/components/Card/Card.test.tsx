@@ -26,6 +26,6 @@ describe('Card', () => {
     );
     expect(getByText('Test Title')).toBeVisible();
     expect(container.firstChild).toHaveStyle('opacity: 0.5');
-    expect(container.firstChild).toHaveStyle('pointer-events: none');
+    expect(container.firstChild).toHaveStyle('cursor: not-allowed');
   });
 });

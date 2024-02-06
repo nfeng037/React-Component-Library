@@ -8,7 +8,11 @@ const CardContainer = styled.div<{ disabled?: boolean }>`
   padding: 20px;
   max-width: 300px;
   opacity: ${(props) => (props.disabled ? 0.5 : 1)};
-  pointer-events: ${(props) => (props.disabled ? "none" : "auto")};
+  ${(props) => props.disabled && `
+  cursor: not-allowed;
+  background: none;
+  background-color: darkgrey;
+`}
 `;
 
 const Image = styled.img`
@@ -36,7 +40,7 @@ const Button = styled.button`
 `;
 
 const Card: React.FC<CardProps> = ({
-  imageUrl,
+  imageurl,
   title,
   content,
   buttonText,
@@ -45,7 +49,7 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <CardContainer disabled={disabled}>
-      {imageUrl && <Image src={imageUrl} alt={title} />}
+      {imageurl && <Image src={imageurl} alt={title} />}
       <Title>{title}</Title>
       <Content>{content}</Content>
       {buttonText && <Button onClick={onButtonClick} disabled={disabled}>{buttonText}</Button>}

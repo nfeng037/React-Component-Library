@@ -1,28 +1,26 @@
-# Stage 1: Building the code
-FROM node:latest as build
+# Use an official Node.js runtime as a base image
+FROM node:latest
 
-# Set the working directory in the Docker container
-WORKDIR /app
+# Set the working directory in the container
+WORKDIR /feng_na_ui_garden
 
-# Copy the package.json and install dependencies
-COPY package.json .
-COPY package-lock.json .
+# Copy the package.json file and package-lock.json file
+COPY package*.json ./
+
+# Install dependencies
 RUN npm install
 
-# Copy the rest of the code
+# Copy the rest of your component library's source files
 COPY . .
 
-# Build the application
-RUN npm run build
+# Build your component library
+RUN npm run rollup
 
-# Stage 2: Serve the app with Nginx
-FROM nginx:alpine
+# Build the static Storybook
+RUN npm run build-storybook
 
-# Copy the build output to replace the default nginx contents.
-COPY --from=build /app/build /usr/share/nginx/html
+# Install a simple http server for serving static content
+RUN npm install -g http-server
 
-# Expose port 8083 for the service.
-EXPOSE 8083
-
-# Set the default command for the container to nginx
-CMD ["nginx", "-g", "daemon off;"]
+# The default command to run when starting the container
+CMD ["http-server", "storybook-static", "-p 8083"]
