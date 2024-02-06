@@ -1,0 +1,9 @@
+import{u as y,j as d}from"./styled-components.browser.esm-9616713e.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";const v=y.input`
+  margin: 0.5rem;
+  cursor: pointer;
+  ${a=>a.disabled&&`
+    background-color: lightgrey;
+    cursor: not-allowed;
+    color: #darkgrey;
+  `}
+`,e=({id:a,name:c,value:m,checked:p,disabled:g,onChange:f})=>d(v,{type:"radio",id:a,name:c,value:m,checked:p,disabled:g,onChange:f});try{e.displayName="Radio",e.__docgenInfo={description:"",displayName:"Radio",props:{id:{defaultValue:null,description:"",name:"id",required:!0,type:{name:"string"}},name:{defaultValue:null,description:"",name:"name",required:!0,type:{name:"string"}},value:{defaultValue:null,description:"",name:"value",required:!0,type:{name:"string"}},checked:{defaultValue:null,description:"",name:"checked",required:!1,type:{name:"boolean"}},disabled:{defaultValue:null,description:"",name:"disabled",required:!1,type:{name:"boolean"}},onChange:{defaultValue:null,description:"",name:"onChange",required:!1,type:{name:"((event: ChangeEvent<HTMLInputElement>) => void)"}}}}}catch{}const h={title:"Components/Radio",component:e},r=()=>d(e,{id:"radio1",name:"radio",value:"value1"}),o=()=>d(e,{id:"radio2",name:"radio",value:"value2",disabled:!0});var i,t,n;r.parameters={...r.parameters,docs:{...(i=r.parameters)==null?void 0:i.docs,source:{originalSource:'() => <Radio id="radio1" name="radio" value="value1" />',...(n=(t=r.parameters)==null?void 0:t.docs)==null?void 0:n.source}}};var l,s,u;o.parameters={...o.parameters,docs:{...(l=o.parameters)==null?void 0:l.docs,source:{originalSource:'() => <Radio id="radio2" name="radio" value="value2" disabled />',...(u=(s=o.parameters)==null?void 0:s.docs)==null?void 0:u.source}}};const q=["Default","Disabled"];export{r as Default,o as Disabled,q as __namedExportsOrder,h as default};
